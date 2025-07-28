@@ -1,5 +1,21 @@
 // api/index.js
+import express from 'express';
+import { kv } from '@vercel/kv';
+import axios from 'axios';
+import cors from 'cors'; // 1. IMPORT CORS
 
+// Initialize Express app
+const app = express();
+
+// 2. USE THE CORS MIDDLEWARE
+// This must be placed before your route definitions.
+app.use(cors({
+  origin: process.env.FRONTEND_URL 
+}));
+
+app.use(express.json());
+
+// ... the rest of your API code remains the same ...
 import express from 'express';
 import { kv } from '@vercel/kv';
 import axios from 'axios';
