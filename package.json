@@ -1,10 +1,14 @@
 {
-  "repository": "https://github.com/vercel/examples.git",
-  "license": "MIT",
+  "name": "content-api-backend",
+  "version": "1.0.0",
   "private": true,
-  "devDependencies": {
-    "@types/node": "^17.0.42",
-    "@vercel/node": "^2.9.6",
-    "typescript": "^4.7.3"
+  "type": "module",
+  "scripts": {
+    "start": "node api/index.js"
+  },
+  "dependencies": {
+    "@vercel/kv": "^1.0.1",
+    "axios": "^1.7.2",
+    "express": "^4.19.2"
   }
 }
